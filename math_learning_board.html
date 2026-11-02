@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>数学探险岛｜三年级乘除法学习板</title>
+<style>
+:root{--ink:#17324d;--muted:#678096;--bg:#f5f9ff;--card:#fff;--blue:#3478ec;--mint:#16a986;--orange:#ef9d44;--line:#e1eaf5;--shadow:0 12px 34px rgba(42,83,140,.09)}*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:radial-gradient(circle at 15% 0%,#e6f5ff,transparent 45%),var(--bg);color:var(--ink)}button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible{outline:3px solid #93baff;outline-offset:2px}.shell{max-width:1150px;margin:auto;padding:24px}header{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}.brand{font-weight:900;font-size:25px}.brand span{color:var(--blue)}.sub{color:var(--muted);font-size:14px;margin-top:5px}.pill{background:#fff;border:1px solid var(--line);padding:9px 13px;border-radius:999px;font-size:13px}.hero{background:linear-gradient(115deg,#3478ec,#6a79ed);color:#fff;border-radius:24px;margin-top:23px;padding:28px;box-shadow:var(--shadow);display:grid;grid-template-columns:1.5fr .7fr;gap:12px;align-items:center}.hero h1{margin:0 0 8px;font-size:clamp(23px,3vw,34px)}.hero p{opacity:.94;line-height:1.7;margin:0}.hero-art{font-size:65px;text-align:center}.stages{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:11px;margin:20px 0}.stage{background:#fff;border:1px solid var(--line);border-radius:17px;padding:15px;text-align:left;color:var(--ink);min-height:98px;box-shadow:0 3px 12px #17324d08}.stage.active{border:2px solid var(--blue);background:#edf4ff;padding:14px}.stage .n{display:inline-block;border-radius:8px;background:#e9f0fb;color:var(--blue);font-size:12px;font-weight:800;padding:3px 7px;margin-bottom:9px}.stage strong{display:block;font-size:15px}.stage small{color:var(--muted);display:block;margin-top:5px}.layout{display:grid;grid-template-columns:minmax(0,1fr) 285px;gap:18px}.panel,.sidecard{background:var(--card);border-radius:22px;box-shadow:var(--shadow);border:1px solid var(--line)}.panel{padding:25px;min-height:510px}.panel h2{font-size:23px;margin:0 0 6px}.desc{color:var(--muted);font-size:14px;line-height:1.7;margin:0 0 19px}.sidecard{padding:19px;margin-bottom:15px}.sidecard h3{margin:0 0 13px;font-size:16px}.bar{background:#e8eff7;border-radius:99px;height:10px;overflow:hidden;margin:8px 0}.fill{background:linear-gradient(90deg,#35b9a4,#3478ec);height:100%;width:0%;transition:width .3s}.stat{display:flex;justify-content:space-between;font-size:13px;margin:10px 0;color:var(--muted)}.bigmath{font-size:clamp(28px,4vw,43px);font-weight:900;text-align:center;margin:12px 0}.hintbox{border-radius:14px;background:#f0f6ff;padding:14px;line-height:1.7;color:#355473;font-size:14px;margin:13px 0}.visual{background:#fbfdff;border:1px dashed #cbdcf2;border-radius:17px;padding:18px;margin-bottom:16px;min-height:180px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:center}.group{border:2px dashed #a6c4ee;background:#f2f8ff;border-radius:14px;padding:9px;display:grid;grid-template-columns:repeat(4,19px);gap:6px;justify-content:center}.dot{height:17px;width:17px;border-radius:50%;background:#4a8ef4;display:inline-block}.dot.extra{background:#f0a44d}.controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.btn{background:var(--blue);color:white;border:0;border-radius:12px;padding:11px 17px;font-weight:800}.btn.alt{background:#eaf2ff;color:#2359b0}.btn.green{background:var(--mint)}.btn:disabled{opacity:.43;cursor:not-allowed}.stepper{display:flex;gap:8px;align-items:center;background:#f2f6fc;padding:8px;border-radius:12px}.stepper button{background:white;border:1px solid var(--line);width:32px;height:32px;border-radius:9px}.stepper span{min-width:26px;text-align:center;font-weight:800}.options{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}.opt{padding:18px 8px;background:#fff;border:2px solid #dce8f7;border-radius:14px;font-size:23px;font-weight:800;color:var(--ink)}.opt:hover{border-color:var(--blue)}.opt.correct{background:#e8faf3;border-color:#17ad83}.opt.wrong{background:#fff0ee;border-color:#e78172}.feedback{font-size:15px;line-height:1.8;border-radius:13px;padding:12px;background:#eff8ff;margin-top:16px;min-height:50px}.gridcards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.flash{padding:22px;border:2px solid var(--line);border-radius:15px;background:#f9fbff;text-align:center;font-size:21px;font-weight:800}.flash.chosen{border-color:var(--blue);background:#ebf4ff}.muted{color:var(--muted)}.small{font-size:13px}.tag{display:inline-block;background:#e9faf5;color:#087c61;padding:5px 10px;border-radius:99px;font-size:12px;font-weight:800}.footer{text-align:center;color:var(--muted);font-size:12px;padding:22px;line-height:1.7}.log{max-height:170px;overflow:auto;font-size:13px;line-height:1.9}.logrow{border-bottom:1px solid var(--line);padding:5px 0}.check{color:#168f69}.cross{color:#c16853}.formrow{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin:14px 0}.formrow input{width:75px;border:1px solid #bdd0e8;border-radius:9px;padding:9px;text-align:center}.notice{color:#725b33;background:#fff8e9;border-radius:12px;padding:11px;font-size:12px;line-height:1.7}.subhead{font-weight:800;margin:10px 0}.footer-btn{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:20px;padding-top:17px;border-top:1px solid var(--line)}
+/* ===== 动画 ===== */
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-14px) rotate(4deg)}}
+.hero-art{animation:floaty 4.5s ease-in-out infinite}
+@keyframes popIn{0%{opacity:0;transform:scale(.35) translateY(8px)}65%{transform:scale(1.12)}100%{opacity:1;transform:none}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes dotPop{0%{opacity:0;transform:scale(0)}70%{transform:scale(1.3)}100%{opacity:1;transform:scale(1)}}
+@keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-8px)}40%{transform:translateX(8px)}60%{transform:translateX(-5px)}80%{transform:translateX(5px)}}
+@keyframes glowPulse{0%{box-shadow:0 0 0 0 rgba(23,173,131,.55)}100%{box-shadow:0 0 0 22px rgba(23,173,131,0)}}
+@keyframes burst{0%{opacity:1;transform:translate(0,0) rotate(0)}45%{opacity:1;transform:translate(calc(var(--x)*.65),var(--y)) rotate(calc(var(--r)*.5))}100%{opacity:0;transform:translate(var(--x),calc(var(--y)*-.2 + 190px)) rotate(var(--r))}}
+.fadein{animation:fadeUp .38s ease both}
+.group{animation:popIn .5s cubic-bezier(.34,1.56,.64,1) both;animation-delay:calc(var(--g,0) * 90ms)}
+.dot{animation:dotPop .46s cubic-bezier(.34,1.56,.64,1) both;animation-delay:calc(var(--i,0) * 32ms);transition:background .25s,box-shadow .25s}
+.dot.lit{background:#ef9d44;box-shadow:0 0 0 4px rgba(239,157,68,.3)}
+.bigmath{animation:popIn .5s cubic-bezier(.34,1.56,.64,1)}
+.opt{transition:transform .18s,border-color .18s,background .18s}
+.opt:hover:not(:disabled){transform:translateY(-3px) scale(1.03)}
+.opt.correct{animation:glowPulse .7s ease-out,popIn .45s cubic-bezier(.34,1.56,.64,1)}
+.opt.wrong{animation:shake .45s ease}
+.stage{transition:transform .2s,box-shadow .2s,border-color .2s}
+.stage:hover{transform:translateY(-3px);box-shadow:0 8px 20px #17324d14}
+.stage.active{animation:popIn .35s ease}
+.term{display:inline-block;animation:popIn .4s cubic-bezier(.34,1.56,.64,1) both;margin:0 1px}
+.plus{opacity:.5;margin:0 2px}.count{color:var(--blue)}.eqline{font-weight:800;margin:5px 0}
+.visual.celebrate{border-color:#17ad83;background:#f2fdf9}
+.confetti-layer{position:fixed;inset:0;pointer-events:none;z-index:99;overflow:hidden}
+.confetti-layer i{position:absolute;left:var(--cx);top:var(--cy);width:9px;height:9px;border-radius:2px;animation:burst .95s cubic-bezier(.2,.8,.3,1) var(--d) both}
+/* ===== 黑板布局 ===== */
+.shell{max-width:1440px;padding:18px 22px}
+.layout{grid-template-columns:minmax(0,1fr) 250px;gap:16px}
+.panel.board{position:relative;padding:30px 34px;min-height:600px;border:12px solid #b0814f;border-radius:18px;color:#eaf4ee;background:radial-gradient(circle at 20% -10%,rgba(255,255,255,.07),transparent 55%),repeating-linear-gradient(0deg,rgba(255,255,255,.013) 0 2px,transparent 2px 5px),linear-gradient(160deg,#2f463e,#1b2a25 55%,#243730);box-shadow:0 26px 60px rgba(12,35,28,.35),inset 0 0 90px rgba(0,0,0,.55),inset 0 2px 0 rgba(255,255,255,.06)}
+.panel.board:before{content:"";position:absolute;inset:6px;border-radius:6px;border:1px dashed rgba(255,255,255,.12);pointer-events:none}
+.board h2{color:#fff;font-family:"KaiTi","STKaiti",system-ui;font-size:27px}
+.board .desc{color:#a8c2b6}
+.board .bigmath{color:#fff;font-family:"KaiTi","STKaiti",system-ui;font-size:clamp(34px,4.6vw,52px);text-shadow:0 2px 0 rgba(0,0,0,.35)}
+.board .hintbox{background:rgba(255,255,255,.07);color:#d9ece2;border:1px solid rgba(255,255,255,.08)}
+.board .tag{background:rgba(22,169,134,.2);color:#7fe6c4;border:1px dashed rgba(127,230,196,.45)}
+.board .opt{background:rgba(255,255,255,.04);border:2px dashed rgba(255,255,255,.32);color:#fff;font-family:"KaiTi","STKaiti",system-ui}
+.board .opt:hover:not(:disabled){border-color:#7fb8ff;background:rgba(120,170,255,.14)}
+.board .opt.correct{background:rgba(23,173,131,.28);border:2px solid #3ddcb0;color:#eafff7}
+.board .opt.wrong{background:rgba(226,90,60,.25);border:2px solid #ff8a72}
+.board .feedback{background:rgba(255,255,255,.06);color:#dbeae2;border:1px solid rgba(255,255,255,.08)}
+.board .visual{border:2px dashed rgba(255,255,255,.22);background:rgba(255,255,255,.04)}
+.board .visual.celebrate{border-color:#3ddcb0;background:rgba(23,173,131,.12)}
+.board .group{border-color:rgba(126,196,240,.4);background:rgba(255,255,255,.05)}
+.board .dot{background:#6fb3ff;box-shadow:0 0 10px rgba(111,179,255,.5)}
+.board .dot.extra{background:#ffb861;box-shadow:0 0 10px rgba(255,184,97,.5)}
+.board .dot.lit{background:#ffb861;box-shadow:0 0 0 4px rgba(255,184,97,.22),0 0 14px rgba(255,184,97,.6)}
+.board .count{color:#ffe08a}.board .eqline{color:#f2fbf6}
+.board .small.muted,.board .muted{color:#9fb8ac}
+.board .stepper{background:rgba(255,255,255,.07);color:#eaf4ee}
+.board .stepper button{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.2);color:#fff}
+.board .footer-btn{border-top:1px dashed rgba(255,255,255,.18)}
+.board .btn{background:#3f8bff;box-shadow:0 4px 14px rgba(63,139,255,.35)}
+.board .btn.alt{background:rgba(255,255,255,.12);color:#dcecff}
+.board .btn.green{background:#16a986}
+.board .flash{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.2);color:#fff}
+.board .flash.chosen{border-color:#7fb8ff;background:rgba(120,170,255,.14)}
+.board .formrow input{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.25);color:#fff}
+.board .notice{background:rgba(255,255,255,.07);color:#cfe0d7}
+.board .logrow{border-color:rgba(255,255,255,.1)}
+.sidecard{padding:14px;border-radius:16px;margin-bottom:12px}
+.sidecard h3{font-size:14px;margin-bottom:10px}
+.side .stat,.side .log,.side .small{font-size:12px}
+.side .btn.small{padding:8px 12px;font-size:12px}
+.pills{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+button.pill{cursor:pointer;font-weight:700;color:var(--ink);transition:transform .15s}
+button.pill:hover{transform:translateY(-2px)}
+button.pill.off{opacity:.55}
+@media(max-width:800px){.panel.board{border-width:7px;min-height:0}.layout{gap:12px}}
+/* ===== 讲解板（语音 + 黑板书写）===== */
+.narr{display:none;margin-top:16px;padding:14px 16px;border:2px dashed rgba(255,255,255,.28);border-radius:14px;background:rgba(255,255,255,.05);max-height:280px;overflow:auto}
+.narr.show{display:block;animation:fadeUp .3s ease both}
+.narr-head{font-size:12px;font-weight:800;color:#7fe6c4;letter-spacing:.5px;margin-bottom:6px}
+.narr.playing .narr-head:after{content:" ●";color:#ff8a72;animation:blink 1s infinite}
+@keyframes blink{50%{opacity:.15}}
+.nline{font-family:"KaiTi","STKaiti",system-ui;font-size:17.5px;line-height:1.95;color:#f0fbf5;margin:4px 0;min-height:1.2em}
+.nline:before{content:"✎ ";color:#7fe6c4;font-size:15px}
+/* ===== 竖式计算 ===== */
+.seg{display:flex;gap:4px;background:rgba(255,255,255,.08);border-radius:12px;padding:4px}
+.seg button{border:0;background:transparent;color:#cfe0d7;padding:9px 14px;border-radius:9px;font-weight:800;cursor:pointer}
+.seg button.on{background:#3f8bff;color:#fff}
+.vcalc{display:flex;justify-content:center;padding:10px 0 4px}
+.vcol{font-family:"KaiTi","STKaiti",system-ui;color:#fff}
+.vrow{display:flex;align-items:center;height:60px}
+.vrow.sm{height:36px}
+.vrow.rule{height:10px;align-items:flex-start}
+.vcell{width:56px;flex:0 0 56px;text-align:center;font-size:40px;line-height:60px}
+.vrow.sm .vcell{font-size:24px;line-height:36px}
+.vcell.vt{border-top:3px solid #dbeee5}
+.vop{width:42px;flex:0 0 42px;text-align:center;font-size:34px;color:#7fe6c4}
+.vlead{width:60px;flex:0 0 60px;text-align:center;font-size:40px}
+.vbrk{width:16px;flex:0 0 16px}
+.vbrk.on{align-self:stretch;border-left:3px solid #dbeee5;border-top:3px solid #dbeee5;border-top-left-radius:12px}
+.vrule{height:0;border-top:3px solid #dbeee5;margin:0 0 4px}
+.vrow.rule .vrule{margin:1px 0 0}
+.vdiv .vrow{height:56px}
+.vdiv .vrow.rule{height:8px}
+.vdiv .vcell,.vdiv .vlead{line-height:56px;font-size:38px}
+.vhide{opacity:0}
+.vshow{animation:popIn .35s cubic-bezier(.34,1.56,.64,1) both}
+.vcarry{color:#ffd479}
+/* ===== 讲解板（语音 + 黑板书写）===== */
+.narr{display:none;margin-top:16px;padding:14px 16px;border:2px dashed rgba(255,255,255,.28);border-radius:14px;background:rgba(255,255,255,.05);max-height:280px;overflow:auto}
+.narr.show{display:block;animation:fadeUp .3s ease both}
+.narr-head{font-size:12px;font-weight:800;color:#7fe6c4;letter-spacing:.5px;margin-bottom:6px}
+.narr.playing .narr-head:after{content:" ●";color:#ff8a72;animation:blink 1s infinite}
+@keyframes blink{50%{opacity:.15}}
+.nline{font-family:"KaiTi","STKaiti",system-ui;font-size:17.5px;line-height:1.95;color:#f0fbf5;margin:4px 0;min-height:1.2em}
+.nline:before{content:"✎ ";color:#7fe6c4;font-size:15px}
+/* ===== 位值模型 + 讲解跟随高亮 ===== */
+.vwrap{display:grid;grid-template-columns:auto minmax(0,1fr);gap:22px;align-items:start;margin-top:8px}
+.pvbox{border:2px dashed rgba(255,255,255,.22);border-radius:16px;padding:12px 16px;background:rgba(255,255,255,.04)}
+.pvbox h4{margin:0 0 10px;font-size:12.5px;color:#9fb8ac;font-weight:800;letter-spacing:.4px}
+.pvz{display:flex;align-items:center;gap:10px;margin:7px 0;min-height:30px}
+.pvl{width:20px;flex:0 0 20px;color:#7fe6c4;font-weight:800;font-size:14px;text-align:center}
+.pvbx{display:flex;flex-wrap:wrap;gap:5px;align-items:flex-end;min-height:18px;flex:1;border-radius:10px;transition:background .3s}
+.pvbx.pulse{background:rgba(255,212,121,.12);box-shadow:0 0 0 2px rgba(255,212,121,.35)}
+.pvb{display:block;animation:popIn .32s cubic-bezier(.34,1.56,.64,1) both;border-radius:3px}
+.pvb.o{width:14px;height:14px;border-radius:50%;background:#6fb3ff;box-shadow:0 0 8px rgba(111,179,255,.55)}
+.pvb.t{width:14px;height:48px;background:linear-gradient(#8fd0ff,#4b9cf0);border-radius:4px;position:relative;box-shadow:0 0 10px rgba(111,179,255,.3)}
+.pvb.h{width:48px;height:48px;background:linear-gradient(#ffd08a,#f0a44d);border-radius:5px;position:relative;box-shadow:0 0 12px rgba(255,184,97,.35)}
+.pvgrps{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.pvgrp{flex:1 1 64px;min-height:66px;border:2px dashed rgba(255,255,255,.2);border-radius:12px;padding:16px 6px 6px;display:flex;flex-wrap:wrap;gap:4px;align-content:flex-end;justify-content:center;position:relative}
+.pvgrp:before{content:attr(data-l);position:absolute;top:3px;left:7px;font-size:10.5px;color:#8fa8a0}
+.gtag{position:absolute;top:-20px;left:50%;transform:translateX(-50%);font-size:13px;font-weight:800;color:#ffd479;animation:popIn .3s cubic-bezier(.34,1.56,.64,1) both}
+.group{position:relative}
+.group.counting{border-color:#ffd479;box-shadow:0 0 0 3px rgba(255,212,121,.22)}
+@keyframes vfPulse{0%,100%{color:#ffe08a;filter:drop-shadow(0 0 0 rgba(255,212,121,0))}50%{color:#fff6d8;filter:drop-shadow(0 0 14px rgba(255,212,121,.95))}}
+.vcell.vf{animation:vfPulse 1.2s ease-in-out infinite!important}
+.narr-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.narr-head .nh-l{display:flex;align-items:center;gap:8px}
+.narr-head #nstep{color:#ffe08a;font-weight:800;font-size:11.5px;letter-spacing:.5px}
+.nbtns{display:flex;gap:6px}
+.nbtns button{border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.09);color:#eaf8f1;font-family:inherit;font-size:12px;font-weight:800;padding:5px 10px;border-radius:9px;cursor:pointer;line-height:1.4}
+.nbtns button:hover{background:rgba(255,255,255,.18)}
+.nbtns button:active{transform:translateY(1px)}
+.nbtns button.hot{background:#3f8bff;border-color:#59a2ff;color:#fff;box-shadow:0 0 0 3px rgba(63,139,255,.25)}
+.nline.cur{color:#ffe08a;background:rgba(255,212,121,.1);box-shadow:inset 3px 0 0 #ffd479;border-radius:8px;padding:3px 8px;margin-left:-8px}
+.pvb.lit{box-shadow:0 0 0 2px #ffd479,0 0 14px rgba(255,212,121,.85)}
+.pvbox.noanim .pvb,.pvbox.noanim .gtag{animation:none!important}
+.pvsrc{display:flex;align-items:flex-end;gap:10px;padding:2px 0 10px;margin-bottom:10px;border-bottom:1px dashed rgba(255,255,255,.16)}
+.pvsrc .lab{color:#9fb8ac;font-size:12px;font-weight:800;flex:0 0 34px;padding-bottom:2px}
+.pvsrc .slot{display:flex;gap:4px;align-items:flex-end;min-height:48px;flex-wrap:wrap}
+.pvsrc .slot+.slot{border-left:2px dotted rgba(255,255,255,.18);padding-left:10px}
+.pvgrp{flex:1 1 0%;min-width:110px;min-height:78px}
+.visual.dz .group{transition:box-shadow .18s,background .18s;border-radius:12px;padding:6px}
+.visual.dz .group.over{box-shadow:0 0 0 3px #ffd479;background:rgba(255,212,121,.12)}
+.visual .dot{cursor:grab;touch-action:none}
+.visual .dot.dragging{opacity:.22}
+.dot-ghost{position:fixed;z-index:99;pointer-events:none;border-radius:50%;background:#6fb3ff;box-shadow:0 0 14px rgba(111,179,255,.9);transform-origin:center}
+.tray{margin-top:10px;border:2px dashed rgba(255,255,255,.22);border-radius:12px;padding:9px;color:#93aca2;font-size:13px;text-align:center;transition:.18s}
+.tray.over{border-color:#ffa06e;color:#ffcaa8;background:rgba(255,160,110,.1)}
+.tray b{color:#ffd479}
+.tray .slot{display:flex;gap:5px;justify-content:center;flex-wrap:wrap;margin-top:7px;min-height:19px}
+.tray .tray-l{display:block;line-height:1.5}
+.pvgrp .pvb.o{width:11px;height:11px}
+.pvgrp .pvb.t{width:11px;height:38px}
+.pvbx:empty{min-height:36px;border:1px dashed rgba(255,255,255,.13);border-radius:9px}
+@media(max-width:900px){.vwrap{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+@media(max-width:800px){.layout{grid-template-columns:1fr}.stages{grid-template-columns:repeat(2,1fr)}.hero{grid-template-columns:1fr}.hero-art{display:none}.shell{padding:12px}.panel{padding:18px}.side{display:grid;grid-template-columns:1fr 1fr;gap:10px}.sidecard{margin:0}}
+@media(max-width:470px){.side{grid-template-columns:1fr}.options{gap:6px}.opt{font-size:18px;padding:14px 5px}.gridcards{gap:7px}.flash{font-size:18px;padding:17px 5px}}
+</style></head><body>
+<div class="shell"><header><div><div class="brand">🧠 数学<span>探险岛</span></div><div class="sub">专为“会背口诀，但计算容易出错”的三年级孩子设计</div></div><div class="pills"><span class="pill">⏱️ 建议每天 15–20 分钟 · 不限时</span><button class="pill" id="soundBtn" onclick="toggleSound()">🔊 音效开</button></div></header>
+<section class="hero"><div><h1>从看得见，到算得对 ✨</h1><p>先看懂数量，再连接口诀，然后学会推导，最后解决除法。每次只练几道题，允许思考和犯错。</p></div><div class="hero-art">🧮 ⭐ 🚀</div></section>
+<nav class="stages" id="stages" aria-label="学习阶段"></nav>
+<div class="layout"><main class="panel board"><div id="main"></div><div class="footer-btn"><button class="btn alt" onclick="go(-1)" id="prev">← 上一阶段</button><button class="btn" onclick="go(1)" id="next">下一阶段 →</button></div></main><aside class="side"><section class="sidecard"><h3>📊 今日学习记录</h3><div class="stat"><span>已尝试题目</span><strong id="attempts">0</strong></div><div class="stat"><span>答对题目</span><strong id="correct">0</strong></div><div class="bar"><div class="fill" id="progress"></div></div><p id="rate" class="small muted">先做几道练习，观察正确率。</p><button class="btn alt small" onclick="resetToday()">清空今日记录</button></section><section class="sidecard"><h3>📝 最近练习</h3><div id="history" class="log muted">暂无记录</div></section><section class="sidecard"><h3>👨‍👩‍👧 家长提示</h3><p class="small muted" style="line-height:1.8">不要催促，也不要要求立即答出。答错时先问“你怎么想到的？”，再通过图形或推导找到正确结果。重点记录错误类型，不以速度评判能力。</p><div class="notice">此学习板是家庭辅助练习，不是数学学习障碍诊断工具。孩子数学困难已持续多年，建议同步向学校申请评估或咨询相关专业人员。</div></section></aside></div><div class="footer">进度保存在当前浏览器本机；不会上传孩子的信息。家长可随时清空记录。<br/>数学探险岛 · 家庭学习工具</div></div>
+<script>
+'use strict';const names=['数量看得见','口诀连算式','学会推导','乘除法闯关','竖式计算'];const summaries=['实物分组','准确匹配','减少从头数','知识迁移','规范书写'];const safeLoad=()=>{try{const v=JSON.parse(localStorage.getItem('mathBoardV1')||'{}');return {attempts:Number(v.attempts)||0,correct:Number(v.correct)||0,history:Array.isArray(v.history)?v.history.slice(0,30):[]}}catch{return {attempts:0,correct:0,history:[]}}};let data=safeLoad(),stage=0,groupN=3,perN=4,quizIndex=0,answered=false,chosen=null,matchPick=null,matchDone=false,derivationStep=0,divisionIndex=0,divisionAnswered=false;
+const facts=[{a:3,b:4},{a:6,b:7},{a:7,b:8},{a:4,b:6},{a:8,b:6},{a:9,b:7}];const derive=[{a:3,b:6,known:'3 × 5 = 15',work:'15 + 3 = 18',opts:[15,18,21],hint:'在每组5个的基础上，每组多1个，3组一共多3个。'},{a:7,b:8,known:'7 × 7 = 49',work:'49 + 7 = 56',opts:[54,56,63],hint:'从熟悉的7×7开始，再加上一个7。'},{a:9,b:6,known:'10 × 6 = 60',work:'60 − 6 = 54',opts:[54,56,64],hint:'先算10组6个，再减掉一组6个。'},{a:6,b:8,known:'6 × 7 = 42',work:'42 + 6 = 48',opts:[42,48,56],hint:'6×8比6×7多一个6。'}];const divs=[{total:12,groups:3,opts:[3,4,6]},{total:24,groups:6,opts:[3,4,6]},{total:42,groups:7,opts:[5,6,7]},{total:56,groups:8,opts:[6,7,8]}];
+/* ===== 音效（Web Audio 合成，无需素材文件）===== */
+let AC=null,soundOn=(()=>{try{return localStorage.getItem('mathBoardSound')!=='0'}catch{return true}})();
+function ac(){try{if(!AC)AC=new (window.AudioContext||window.webkitAudioContext)();if(AC.state==='suspended')AC.resume()}catch{}return AC}
+function tone(f,at,dur,type,vol){if(!soundOn)return;const c=ac();if(!c)return;const o=c.createOscillator(),g=c.createGain();o.type=type||'sine';o.frequency.value=f;const t=c.currentTime+at;g.gain.setValueAtTime(.0001,t);g.gain.linearRampToValueAtTime(vol||.1,t+.02);g.gain.exponentialRampToValueAtTime(.0001,t+dur);o.connect(g).connect(c.destination);o.start(t);o.stop(t+dur+.05)}
+const sfx={click:()=>tone(560,0,.07,'triangle',.07),pop:()=>{tone(680,0,.1,'sine',.09);tone(900,.06,.12,'sine',.06)},good:()=>[523,659,784,1047].forEach((f,i)=>tone(f,i*.09,.26,'sine',.11)),bad:()=>{tone(320,0,.16,'triangle',.09);tone(230,.13,.24,'triangle',.08)},whoosh:()=>{if(!soundOn)return;const c=ac();if(!c)return;const o=c.createOscillator(),g=c.createGain(),n=c.currentTime;o.type='sine';o.frequency.setValueAtTime(760,n);o.frequency.exponentialRampToValueAtTime(230,n+.24);g.gain.setValueAtTime(.0001,n);g.gain.linearRampToValueAtTime(.07,n+.03);g.gain.exponentialRampToValueAtTime(.0001,n+.26);o.connect(g).connect(c.destination);o.start(n);o.stop(n+.3)}};
+function syncSound(){const b=document.getElementById('soundBtn');if(b){b.textContent=soundOn?'🔊 音效开':'🔇 音效关';b.classList.toggle('off',!soundOn)}}
+function toggleSound(){soundOn=!soundOn;try{localStorage.setItem('mathBoardSound',soundOn?'1':'0')}catch{}syncSound();if(soundOn)sfx.pop()}
+/* ===== 讲解：语音合成 + 黑板书写动画 ===== */
+let timers=[];
+function stopNarr(){try{speechSynthesis&&speechSynthesis.cancel()}catch{}timers.forEach(clearTimeout);timers=[]}
+let FAST=false;function later(fn,ms){if(FAST){try{fn()}catch{}return 0}const t=setTimeout(fn,ms);timers.push(t);return t}
+function pickVoice(){try{return (speechSynthesis.getVoices()||[]).filter(v=>/^zh/i.test(v.lang))[0]||null}catch{return null}}
+function speak(text,cb){let done=false;const fin=()=>{if(done)return;done=true;cb&&cb()};if(!soundOn){later(fin,Math.min(9000,900+text.length*130));return}
+try{const u=new SpeechSynthesisUtterance(text);u.lang='zh-CN';u.rate=.95;u.pitch=1.05;const v=pickVoice();if(v)u.voice=v;u.onend=fin;u.onerror=fin;speechSynthesis.cancel();speechSynthesis.speak(u);later(fin,4000+text.length*320)}catch{later(fin,900+text.length*160)}}
+function cnNum(n){if(n<10)return cn[n];if(n<20)return '十'+(n%10?cn[n%10]:'');return cn[Math.floor(n/10)]+'十'+(n%10?cn[n%10]:'')}
+function typeText(el,text){let i=0;const tick=()=>{el.textContent=text.slice(0,++i);if(i<text.length)later(tick,52)};tick()}
+function playSteps(steps){stopNarr();const box=document.getElementById('narr');if(!box)return;box.className='narr show playing';box.innerHTML='<div class="narr-head">✍️ 讲解中…</div>';try{box.scrollIntoView({block:'nearest',behavior:'smooth'})}catch{}
+let i=0;const next=()=>{if(i>=steps.length){box.classList.remove('playing');const h=box.querySelector('.narr-head');if(h)h.textContent='✅ 讲完了，再算一遍试试';return}
+const st=steps[i++];const p=document.createElement('div');p.className='nline';box.appendChild(p);if(st.run)st.run();typeText(p,st.say);speak(st.say,()=>later(next,340))};later(next,150)}
+function clearChalk(){document.querySelectorAll('.visual .dot').forEach(d=>d.classList.remove('lit'))}
+function tagGroups(per){const arr=Array.isArray(per)?per:null;let sum=0;document.querySelectorAll('.visual .group').forEach((g,i)=>{if(g.querySelector('.gtag'))return;const v=arr?((sum+=arr[i]),sum):per*(i+1);const t=document.createElement('b');t.className='gtag';t.textContent=v;g.appendChild(t)})}
+function chalkGroup(i){const gs=[...document.querySelectorAll('.visual .group')];const g=gs[i];if(!g)return;gs.forEach((x,j)=>x.classList.toggle('counting',j===i));[...g.querySelectorAll('.dot')].forEach((d,k)=>later(()=>{d.classList.add('lit');tone(720+k*45,0,.09,'sine',.05)},k*85))}
+function markCorrectOpt(v){const o=[...document.querySelectorAll('.opt')].find(b=>b.textContent.trim()===String(v));if(o)o.classList.add('correct')}
+function explainQuantity(){const cs=countsNow(),tot=cs.reduce((a,b)=>a+b,0),eq=equalNow();
+if(!eq){startSteps({reset:renderVisual,steps:[
+ {say:`现在每组不一样多：${cs.map((n,i)=>'第 '+(i+1)+' 组 '+n+' 个').join('，')}。`,run:clearChalk},
+ {say:`每组不一样，就不能直接写乘法了，只能一组一组加起来：${cs.join(' 加 ')} 等于 ${tot}。`,run:()=>{for(let i=0;i<cs.length;i++)later(()=>chalkGroup(i),i*620)}},
+ {say:`把圆点拖成每组一样多，乘法就能用了。`}
+]});return}
+const g=cs.length,p=cs[0];const sums=Array.from({length:g},(_,i)=>p*(i+1));const seq=sums.join('、');
+const cnt=['一组 '+p+' 个'];if(g>=2)cnt.push('两组 '+(2*p)+' 个');if(g>=3)cnt.push('三组 '+(3*p)+' 个');if(g>3)cnt.push('每多一组，就再多 '+p+' 个');
+startSteps({reset:renderVisual,steps:[
+ {say:`看，黑板上一共有 ${g} 组圆点，每组 ${p} 个。`,run:clearChalk},
+ {say:`我们一起数：${seq}。`,run:()=>sums.forEach((_,i)=>later(()=>chalkGroup(i),i*380))},
+ {say:`${cnt.join('，')}。`,run:()=>{clearChalk();for(let i=0;i<g;i++)later(()=>{chalkGroup(i);tagGroups(p)},i*620)}},
+ {say:`把这几组加起来，一共是 ${tot} 个。`,run:()=>later(showQuantity,200)},
+ {say:`写成乘法就是 ${g} 乘 ${p} 等于 ${tot}。乘法，就是相同加数相加的简便写法。`}
+]})}
+function explainMatch(){const f=facts[quizIndex%facts.length];const a=f.a,b=f.b,r=a*b;const kou=cnNum(Math.min(a,b))+cnNum(Math.max(a,b))+cnNum(r);
+startSteps({
+ reset(){showMatchVisual();document.querySelectorAll('.opt.correct').forEach(o=>o.classList.remove('correct'))},
+ steps:[
+ {say:`${a} 乘 ${b}，表示有 ${a} 组，每组 ${b} 个。`,run:()=>{showMatchVisual();clearChalk()}},
+ {say:`我们把每一组都点亮，一组一组地数：${b}、${2*b}、${3*b}。`,run:()=>{tagGroups(b);for(let i=0;i<Math.min(a,6);i++)later(()=>chalkGroup(i),i*380)}},
+ {say:`${a} 乘 ${b} 等于 ${r}。`,run:()=>markCorrectOpt(r)},
+ {say:`这句口诀是 ${kou}。如果背不下来，也可以像刚才这样用图数一遍。`}
+]})}
+function explainDerive(){const f=derive[derivationStep%derive.length];
+startSteps({
+ reset(){document.querySelectorAll('.opt.correct').forEach(o=>o.classList.remove('correct'))},
+ steps:[
+ {say:`这道题不用硬背。先看我们已经会的：${f.known.replace(/×/g,' 乘 ').replace(/=/g,' 等于 ')}。`},
+ {say:`${f.hint}`},
+ {say:`${f.work.replace(/×/g,' 乘 ').replace(/\+/g,' 加 ').replace(/[−-]/g,' 减 ').replace(/=/g,' 等于 ')}。`},
+ {say:`所以 ${f.a} 乘 ${f.b} 等于 ${f.a*f.b}。遇到不会的口诀，就找一个会的算式推过去。`,run:()=>markCorrectOpt(f.a*f.b)}
+]})}
+function explainDivision(){const f=divs[divisionIndex%divs.length];const ans=f.total/f.groups;const kou=cnNum(Math.min(f.groups,ans))+cnNum(Math.max(f.groups,ans))+cnNum(f.total);
+startSteps({
+ reset(){const v=document.querySelector('.visual');if(v){v.classList.remove('celebrate');v.innerHTML=groups(f.groups,ans)}document.querySelectorAll('.opt.correct').forEach(o=>o.classList.remove('correct'))},
+ steps:[
+ {say:`有 ${f.total} 颗星星，平均分成 ${f.groups} 组。`,run:clearChalk},
+ {say:`每组有几颗呢？先别急着算，我们想：${f.groups} 乘几等于 ${f.total}。`,run:()=>{tagGroups(ans);for(let i=0;i<f.groups;i++)later(()=>chalkGroup(i),i*380)}},
+ {say:`口诀是 ${kou}，所以每组 ${ans} 颗。`,run:()=>markCorrectOpt(ans)},
+ {say:`${f.total} 除以 ${f.groups} 等于 ${ans}。除法，就是问每一组里有多少个。`}
+]})}
+/* ===== 竖式计算 + 位值模型 ===== */
+let vMode='mul',vIndex=0,vStep=0;
+const vmul=[{a:23,b:3},{a:24,b:3},{a:36,b:4},{a:47,b:5},{a:13,b:7}];
+const vdiv=[{t:84,d:4},{t:96,d:4},{t:75,d:5},{t:64,d:4},{t:91,d:7}];
+function padArr(str,n){return Array.from({length:n},(_,i)=>(str&&i>=n-str.length)?str[i-(n-str.length)]:'')}
+function cellHTML(ch,attrs,extra,focus){return '<span class="vcell '+(extra||'')+'" '+(attrs||'')+(focus?' data-f="'+focus+'"':'')+'>'+(ch||'')+'</span>'}
+function vReveal(n){document.querySelectorAll('#vboard [data-step="'+n+'"]').forEach(el=>{el.classList.remove('vhide');el.classList.add('vshow')})}
+function vFocus(k){document.querySelectorAll('#vboard .vcell').forEach(c=>c.classList.remove('vf'));if(k)document.querySelectorAll('#vboard [data-f="'+k+'"]').forEach(c=>c.classList.add('vf'))}
+function vReset(){document.querySelectorAll('#vboard [data-step]').forEach(c=>{c.classList.add('vhide');c.classList.remove('vshow')});pvClear();vFocus('')}
+/* --- 位值积木 --- */
+function pvEl(k){return document.getElementById('pv-'+k)}
+function mk(k){const e=document.createElement('i');e.className='pvb '+k;return e}
+function pvClear(){['h','t','o'].forEach(k=>{const z=pvEl(k);if(z)z.innerHTML=''});
+['st','so'].forEach(k=>{const z=document.getElementById('pv-'+k);if(z)z.innerHTML=''});
+document.querySelectorAll('.pvgrp').forEach(g=>{g.innerHTML='';g.classList.remove('counting')});
+document.querySelectorAll('.pvfly').forEach(e=>e.remove())}
+function pvAdd(kind,n){const z=pvEl(kind);if(!z)return;for(let i=0;i<n;i++)z.appendChild(mk(kind))}
+function pvPulse(k){const z=pvEl(k);if(!z)return;z.classList.add('pulse');later(()=>z.classList.remove('pulse'),1700)}
+function renderPV(st){st=st||{};const box=document.querySelector('.pvbox');if(box)box.classList.add('noanim');
+document.querySelectorAll('.pvfly').forEach(e=>e.remove());
+['h','t','o'].forEach(k=>{const z=pvEl(k);if(z)z.innerHTML=''});
+document.querySelectorAll('.pvgrp').forEach(g=>{g.innerHTML='';g.classList.remove('counting')});
+const s1=document.getElementById('pv-st'),s2=document.getElementById('pv-so');
+if(s1&&s2){s1.innerHTML='';s2.innerHTML='';if(st.src){for(let i=0;i<(st.src.t||0);i++)s1.appendChild(mk('t'));for(let i=0;i<(st.src.o||0);i++)s2.appendChild(mk('o'))}}
+['h','t','o'].forEach(k=>{const z=pvEl(k);if(!z)return;for(let i=0;i<(st[k]||0);i++)z.appendChild(mk(k))});
+(st.g||[]).forEach((g,i)=>{const b=document.getElementById('pvg'+i);if(!b)return;for(let j=0;j<(g.t||0);j++)b.appendChild(mk('t'));for(let j=0;j<(g.o||0);j++)b.appendChild(mk('o'))});
+(st.tags||[]).forEach((tx,i)=>{const b=document.getElementById('pvg'+i);if(!b)return;const t=document.createElement('b');t.className='gtag';t.textContent=tx;b.appendChild(t)});
+if(box){void box.offsetWidth;box.classList.remove('noanim')}}
+function flyTo(src,tg,kind){if(!src||!tg)return;const r=src.getBoundingClientRect();const c=mk(kind);c.classList.add('pvfly');c.style.cssText='position:fixed;margin:0;left:'+r.left+'px;top:'+r.top+'px;width:'+r.width+'px;height:'+r.height+'px;z-index:30;pointer-events:none;transition:transform .45s cubic-bezier(.34,1.1,.64,1)';document.body.appendChild(c);const ph=mk(kind);ph.style.visibility='hidden';tg.appendChild(ph);const r2=ph.getBoundingClientRect();requestAnimationFrame(()=>{c.style.transform='translate('+(r2.left-r.left)+'px,'+(r2.top-r.top)+'px)'});later(()=>{ph.style.visibility='';c.remove()},470)}
+function pvBubble(i,txt){const b=document.getElementById('pvg'+i);if(!b)return;b.querySelectorAll('.gtag').forEach(x=>x.remove());const t=document.createElement('b');t.className='gtag';t.textContent=txt;b.appendChild(t)}
+function pvLit(i,kind){const b=document.getElementById('pvg'+i);if(!b)return;b.querySelectorAll('.pvb.'+kind).forEach(d=>d.classList.add('lit'))}
+function pvTenize(n){const z=pvEl('o');if(!z)return;let done=0;const step=()=>{const b=[...z.querySelectorAll('.pvb.o')].slice(0,10);if(b.length<10||done>=n)return;const base=b[0].getBoundingClientRect();
+b.forEach(d=>{const r=d.getBoundingClientRect();d.style.transition='transform .42s ease-in,opacity .42s';d.style.transform='translate('+(base.left-r.left)+'px,'+(base.top-r.top)+'px) scale(.3)';d.style.opacity='.12'});
+later(()=>{b.forEach(d=>d.remove());pvAdd('t',1);tone(900,0,.14,'sine',.08);done++;later(step,170)},430)};step()}
+function pvHundredize(n){const z=pvEl('t');if(!z)return;let done=0;const step=()=>{const b=[...z.querySelectorAll('.pvb.t')].slice(0,10);if(b.length<10||done>=n)return;const base=b[0].getBoundingClientRect();
+b.forEach(d=>{const r=d.getBoundingClientRect();d.style.transition='transform .45s ease-in,opacity .45s';d.style.transform='translate('+(base.left-r.left)+'px,'+(base.top-r.top)+'px) scale(.3)';d.style.opacity='.12'});
+later(()=>{b.forEach(d=>d.remove());pvAdd('h',1);tone(1046,0,.18,'sine',.09);done++;later(step,180)},450)};step()}
+function flipMove(el,target){const a=el.getBoundingClientRect();target.appendChild(el);const b=el.getBoundingClientRect();
+el.style.transition='none';el.style.transform='translate('+(a.left-b.left)+'px,'+(a.top-b.top)+'px)';
+requestAnimationFrame(()=>requestAnimationFrame(()=>{el.style.transition='transform .5s cubic-bezier(.34,1.1,.64,1)';el.style.transform='translate(0,0)'}))}
+function pvDistribute(kind,groups,per,delay){let i=0;for(let g=0;g<groups;g++)for(let k=0;k<per;k++){const t=(delay||0)+i*90;i++;
+later(()=>{const z=pvEl(kind);const el=z&&z.querySelector('.pvb.'+kind);const tg=document.getElementById('pvg'+g);
+if(el&&tg){flipMove(el,tg);tone(620,0,.07,'triangle',.05)}},t)}}
+function pvGather(kind,groups,per,delay){let i=0;for(let g=0;g<groups;g++)for(let k=0;k<per;k++){const t=(delay||0)+i*80;i++;
+later(()=>{const gr=document.getElementById('pvg'+g);const el=gr&&gr.querySelector('.pvb.'+kind);const tg=pvEl(kind);
+if(el&&tg){flipMove(el,tg);tone(540,0,.05,'triangle',.045)}},t)}}
+function pvBreak(n,delay){const z=pvEl('t');if(!z)return;for(let i=0;i<n;i++)later(()=>{const el=z.querySelector('.pvb.t');if(!el)return;
+el.style.transition='transform .35s,opacity .35s';el.style.transform='scale(.2)';el.style.opacity='0';tone(340,0,.12,'triangle',.07);
+later(()=>{el.remove();pvAdd('o',10)},330)},(delay||0)+i*300)}
+function cntLine(per,n){const a=Array.from({length:n},(_,i)=>per*(i+1));return n<=4?a.join('、'):a[0]+'、'+a[1]+'……'+a[n-1]}
+/* --- 乘法 --- */
+function vertMulPlan(){const f=vmul[vIndex%vmul.length],a=f.a,b=f.b;
+const A=String(a),P=String(a*b),cols=Math.max(A.length,P.length);
+const d0=+A.slice(-1),d1=A.length>1?+A.slice(-2,-1):0;
+const ones=b*d0,tens0=b*d1,ct=Math.floor(ones/10),ol=ones%10,tensAll=tens0+ct,hu=Math.floor(tensAll/10),tl=tensAll%10;
+const G=n=>Array.from({length:b},()=>({t:n===undefined?d1:n,o:0}));
+const sSrc={src:{t:d1,o:d0}};
+const sGrp={src:{t:d1,o:d0},g:Array.from({length:b},()=>({t:d1,o:d0}))};
+const sCntO={src:{t:d1,o:d0},g:G(),tags:Array.from({length:b},(_,i)=>d0*(i+1))};
+const sGatO={src:{t:d1,o:d0},g:G(),o:ones};
+const sCarry={src:{t:d1,o:d0},g:G(),o:ol,t:ct};
+const sCntT={src:{t:d1,o:d0},g:G(),o:ol,t:ct,tags:Array.from({length:b},(_,i)=>d1*(i+1))};
+const sGatT={t:tensAll,o:ol};
+const sEnd=hu?{h:hu,t:tl,o:ol}:{t:tensAll,o:ol};
+const seq=[];
+seq.push({key:'src',state:sSrc,focus:'',say:`先看清楚：${a} 里面有 ${d1} 个十和 ${d0} 个一。`,
+ run(){renderPV({});const st=document.getElementById('pv-st'),so=document.getElementById('pv-so');if(!st||!so)return;let k=0;
+ for(let i=0;i<d1;i++)later(()=>{st.appendChild(mk('t'));tone(540+i*70,0,.08,'sine',.05)},120+(k++)*120);
+ for(let i=0;i<d0;i++)later(()=>{so.appendChild(mk('o'));tone(660+i*60,0,.08,'sine',.05)},120+(k++)*120)}});
+seq.push({key:'groups',state:sGrp,focus:'',say:`${a} 乘 ${b}，就是 ${b} 份 ${a}。一份一份地摆出来。`,
+ run(){renderPV(sSrc);const dly=(b*(d1+d0)>16)?90:130;let k=0;
+  for(let g=0;g<b;g++){const tg=document.getElementById('pvg'+g);if(!tg)continue;const t0=(k)*dly;
+   later(()=>{document.querySelectorAll('.pvgrp').forEach(x=>x.classList.remove('counting'));tg.classList.add('counting');tone(600+g*70,0,.1,'sine',.05)},t0);
+   for(let i=0;i<d1;i++)later(()=>flyTo(document.getElementById('pv-st').querySelector('.pvb.t'),tg,'t'),(k++)*dly);
+   for(let i=0;i<d0;i++)later(()=>flyTo(document.getElementById('pv-so').querySelector('.pvb.o'),tg,'o'),(k++)*dly)}}});
+seq.push({key:'countO',state:sCntO,focus:'f-u',say:`先数个位：每份 ${d0} 个一，${cntLine(d0,b)}，一共 ${ones} 个一。`,
+ run(){renderPV(sGrp);for(let g=0;g<b;g++)later(()=>{const gr=document.getElementById('pvg'+g);if(!gr)return;
+  document.querySelectorAll('.pvgrp').forEach(x=>x.classList.remove('counting'));
+  gr.classList.add('counting');pvLit(g,'o');pvBubble(g,d0*(g+1));tone(760+g*40,0,.09,'sine',.05)},300+g*620)}});
+seq.push({key:'gatherO',state:sGatO,focus:'f-u',say:`把这 ${ones} 个一全部收进“个”这一格。`,
+ run(){renderPV(sGrp);pvGather('o',b,d0,150)}});
+if(ct)seq.push({key:'carry',state:sCarry,focus:'f-u',say:`${ones} 个一太多了：每 10 个捆成一捆，捆出 ${ct} 个十，还剩 ${ol} 个一。这就是竖式里的“进 ${ct}”。`,
+ run(){renderPV(sGatO);later(()=>pvTenize(ct),200)}});
+seq.push({key:'countT',state:sCntT,focus:'f-t',say:`再数十位：每份 ${d1} 个十，${cntLine(d1,b)}${ct?'，再加上刚捆出来的 '+ct+' 个十':''}，一共 ${tensAll} 个十。`,
+ run(){renderPV(ct?sCarry:sGatO);for(let g=0;g<b;g++)later(()=>{const gr=document.getElementById('pvg'+g);if(!gr)return;
+  document.querySelectorAll('.pvgrp').forEach(x=>x.classList.remove('counting'));
+  gr.classList.add('counting');pvLit(g,'t');pvBubble(g,d1*(g+1));(ct&&g===b-1)&&pvPulse('t');tone(700+g*40,0,.09,'sine',.05)},300+g*600)}});
+seq.push({key:'gatherT',state:sGatT,focus:'f-t',say:`把这 ${tensAll} 个十全部收进“十”这一格。`,
+ run(){renderPV(sCntT);pvGather('t',b,d1,150)}});
+if(hu)seq.push({key:'hundred',state:sEnd,focus:'f-t',say:`${tensAll} 个十满 10 了：每 10 个十换成 1 个百，得到 ${hu} 个百，还剩 ${tl} 个十。`,
+ run(){renderPV(sGatT);later(()=>pvHundredize(hu),200)}});
+seq.push({key:'result',state:sEnd,focus:'',say:`所以 ${a} 乘 ${b} 等于 ${a*b}：${hu?hu+' 个百、':''}${tl} 个十、${ol} 个一。竖式里写的就是这个结果。`,
+ run(){renderPV(sEnd);pvPulse('o');later(()=>pvPulse('t'),300);if(hu)later(()=>pvPulse('h'),600)}});
+const ix=k=>seq.findIndex(x=>x.key===k);
+const ixOf=k=>{const i=ix(k);return i<0?1:i+1};
+const unitS=ixOf(ct?'carry':'gatherO'),tensS=ixOf(hu?'hundred':'gatherT'),hS=ixOf('hundred');
+const carryCol=Math.max(0,cols-A.length+Math.max(0,A.length-2));
+const carryRow=Array.from({length:cols},(_,i)=>i===carryCol&&ct?cellHTML(ct,'data-step="'+ixOf('carry')+'"','vcarry vhide','f-u'):cellHTML('')).join('');
+const aRow=padArr(A,cols).map((ch,i)=>ch?cellHTML(ch,'','',i===cols-1?'f-u':'f-t'):cellHTML('')).join('');
+const bRow=padArr(String(b),cols).map(ch=>ch?cellHTML(ch,'','','f-u'):cellHTML('')).join('');
+const pRow=padArr(P,cols).map((ch,i)=>ch?cellHTML(ch,'data-step="'+(i===cols-1?unitS:(i===cols-2?tensS:hS))+'"','vhide',i===cols-1?'f-u':'f-t'):cellHTML('')).join('');
+const html='<div class="vcol vmul"><div class="vrow sm"><span class="vop"></span>'+carryRow+'</div><div class="vrow"><span class="vop"></span>'+aRow+'</div><div class="vrow"><span class="vop">×</span>'+bRow+'</div><div class="vrule"></div><div class="vrow"><span class="vop"></span>'+pRow+'</div></div>';
+seq.forEach(st=>{if(st.key==='gatherO'&&!ct)st.v=[unitS];if(st.key==='carry')st.v=[ixOf('carry')];if(st.key==='gatherT'&&!hu)st.v=[tensS];if(st.key==='hundred')st.v=[hS]});
+return {title:a+' × '+b+' = ?',html,steps:seq}}
+/* --- 除法 --- */
+function vertDivPlan(){const f=vdiv[vIndex%vdiv.length],t=f.t,d=f.d;
+const T=String(t),cols=T.length,t1=+T[0],t0=+T[1];
+const q1=Math.floor(t1/d),p1=q1*d,r1=t1-p1,cur=r1*10+t0,q0=Math.floor(cur/d),p2=q0*d,r2=cur-p2;
+const Q=(q1>0?String(q1):'')+String(q0);
+const GG=()=>Array.from({length:d},()=>({t:q1,o:q0}));
+const s0={t:t1,o:t0};
+const s1={t:r1,o:t0,g:Array.from({length:d},()=>({t:q1,o:0}))};
+const s2={t:0,o:cur,g:Array.from({length:d},()=>({t:q1,o:0}))};
+const s3={g:GG()};
+const seq=[];
+seq.push({key:'src',state:s0,focus:'',say:`${t} 里面有 ${t1} 个十和 ${t0} 个一。要把它们平均分成 ${d} 组。`,
+ run(){renderPV({});let k=0;for(let i=0;i<t1;i++)later(()=>{pvAdd('t',1);tone(540+i*60,0,.07,'sine',.05)},120+(k++)*120);
+  for(let i=0;i<t0;i++)later(()=>{pvAdd('o',1);tone(660+i*60,0,.07,'sine',.05)},120+(k++)*120)}});
+seq.push({key:'divT',state:s1,focus:'f-1',say:`先分十位：${t1} 个十，每组 ${q1} 个，一共分掉 ${p1} 个${r1?'，还剩 '+r1+' 个十':'，正好分完'}。`,
+ run(){renderPV(s0);pvDistribute('t',d,q1)}});
+if(r1)seq.push({key:'break',state:s2,focus:'f-2',say:`剩下 ${r1} 个十不够分，把它拆成 ${r1*10} 个一，和原来的 ${t0} 个一合起来，是 ${cur} 个一。这就是竖式里“落下来”的那一步。`,
+ run(){renderPV(s1);pvBreak(r1,d*q1*90+400)}});
+seq.push({key:'divO',state:s3,focus:'f-3',say:`再把 ${cur} 个一平均分给 ${d} 组，每组 ${q0} 个。`,
+ run(){renderPV(r1?s2:s1);pvDistribute('o',d,q0,r1?(r1*300+900):300)}});
+seq.push({key:'result',state:s3,focus:'',say:`所以每个组分到 ${q1} 个十和 ${q0} 个一，${t} 除以 ${d} 等于 ${Q}。`,
+ run(){renderPV(s3);pvPulse('o');later(()=>pvPulse('t'),300)}});
+const nOf=k=>{const i=seq.findIndex(x=>x.key===k);return i<0?1:i+1};
+const lead=(ch,cls)=>'<span class="vlead">'+(ch||'')+'</span><span class="vbrk '+(cls||'')+'"></span>';
+const qArr=padArr(Q,cols);
+const qCells=qArr.map((ch,i)=>ch?cellHTML(ch,'data-step="'+(i===cols-1?nOf('divO'):nOf('divT'))+'"','vhide',i===cols-1?'f-3':'f-1'):cellHTML('')).join('');
+const dCells=T.split('').map((ch,i)=>cellHTML(ch,'','vt',i===0?'f-1':'f-3')).join('');
+const numRow=(v,step,focus)=>{const arr=padArr(String(v),cols);const c=arr.map(ch=>ch?cellHTML(ch,'data-step="'+step+'"','vhide',focus):cellHTML('')).join('');return '<div class="vrow">'+lead('')+c+'</div>'};
+const ruleRow=(n,side)=>{const pad=side==='right'?'<span class="vcell"></span>'.repeat(cols-n):'';return '<div class="vrow rule">'+lead('')+pad+'<span class="vrule" style="width:'+(n*56)+'px;flex:0 0 '+(n*56)+'px"></span></div>'};
+const html='<div class="vcol vdiv"><div class="vrow">'+lead('')+qCells+'</div><div class="vrow">'+lead(d,'on')+dCells+'</div>'
+ +'<div class="vrow">'+lead('')+cellHTML(p1,'data-step="'+nOf('divT')+'"','vhide','f-1')+cellHTML('')+'</div>'
+ +ruleRow(1,'left')+numRow(cur,nOf(r1?'break':'divO'),'f-2')+numRow(p2,nOf('divO'),'f-3')+ruleRow(String(p2).length,'right')+numRow(r2,nOf('divO'),'f-3')+'</div>';
+seq.forEach(st=>{if(st.key==='divT')st.v=[nOf('divT')];if(st.key==='break')st.v=[nOf('break')];if(st.key==='divO')st.v=r1?[nOf('divO')]:[nOf('divO')];if(st.key==='result'&&!r1)st.v=[]});
+return {title:t+' ÷ '+d+' = ?',html,steps:seq}}
+/* --- 渲染 --- */
+function renderVertical(){const plan=vMode==='mul'?vertMulPlan():vertDivPlan();
+const bins='<div class="pvz"><span class="pvl">百</span><div class="pvbx" id="pv-h"></div></div><div class="pvz"><span class="pvl">十</span><div class="pvbx" id="pv-t"></div></div><div class="pvz"><span class="pvl">个</span><div class="pvbx" id="pv-o"></div></div>';
+const nGrp=vMode==='mul'?vmul[vIndex%vmul.length].b:vdiv[vIndex%vdiv.length].d;
+const word=vMode==='mul'?'份':'组';
+const grps='<div class="pvgrps">'+Array.from({length:nGrp},(_,i)=>'<div class="pvgrp" id="pvg'+i+'" data-l="第'+(i+1)+word+'"></div>').join('')+'</div>';
+const pvHTML=vMode==='mul'
+ ?'<div class="pvsrc"><span class="lab">原数</span><div class="slot" id="pv-st"></div><div class="slot" id="pv-so"></div></div>'+grps+bins
+ :bins+grps;
+document.getElementById('main').innerHTML='<span class="tag">阶段五 · 竖式计算</span><h2>横式变竖式，一位一位算清楚</h2><p class="desc">竖式把“进位”和“落位”写得明明白白。左边是算式，右边是真实方块：1 根小棒 = 10 个，1 块方块 = 100 个。点“讲解竖式”，可以一步一步看。</p><div class="controls"><div class="seg"><button class="'+(vMode==='mul'?'on':'')+'" onclick="setVert(\'mul\')">乘法竖式</button><button class="'+(vMode==='div'?'on':'')+'" onclick="setVert(\'div\')">除法竖式</button></div><button class="btn green" onclick="vertExplain()">▶ 讲解竖式</button><button class="btn" onclick="vertNext()">下一步 →</button><button class="btn alt" onclick="vertShuffle()">换一题</button></div><div class="bigmath">'+plan.title+'</div><div class="vwrap"><div class="vcalc" id="vboard">'+plan.html+'</div><div class="pvbox"><h4>🧱 位值积木 · 1 个百 = 10 个十，1 个十 = 10 个一</h4>'+pvHTML+'</div></div><div class="narr" id="narr"></div>'}
+function setVert(m){vMode=m;vIndex=0;nPlan=null;sfx.click();renderVertical()}
+function vertShuffle(){vIndex++;nPlan=null;sfx.pop();renderVertical()}
+/* --- 分步讲解（可上一步 / 下一步）--- */
+let nPlan=null,nIdx=-1,nAuto=true,nGen=0;
+function narrShell(){const box=document.getElementById('narr');if(!box)return null;
+if(!box.querySelector('.nbtns')){box.className='narr show';
+box.innerHTML='<div class="narr-head"><span class="nh-l">✍️ 竖式讲解 <b id="nstep"></b></span><span class="nbtns"><button onclick="narrPrev()">◀ 上一步</button><button id="nnext" onclick="narrNext()">下一步 ▶</button><button id="nauto" onclick="narrToggle()">⏸ 暂停</button></span></div><div id="nlines"></div>'}
+return box}
+function narrHud(){const n=document.getElementById('nstep');if(n&&nPlan)n.textContent=(nIdx+1)+' / '+nPlan.steps.length;
+const b=document.getElementById('nauto');if(b)b.textContent=nAuto?'⏸ 暂停':'▶ 自动播放';const nx=document.getElementById('nnext');if(nx)nx.classList.toggle('hot',!nAuto&&nPlan&&nIdx<nPlan.steps.length-1)}
+function narrGo(i){if(!nPlan||i<0||i>=nPlan.steps.length)return;const st=nPlan.steps[i];
+stopNarr();const g=++nGen;
+if(nPlan.stateMode){renderPV(i>0?nPlan.steps[i-1].state:{});vFocus('')}
+if(st.v)st.v.forEach(vReveal);
+if(st.focus!==undefined)vFocus(st.focus);
+if(st.run)st.run();
+const oldIdx=nIdx;nIdx=i;
+const lines=document.getElementById('nlines');
+if(lines){if(oldIdx>=0&&lines.children[oldIdx])lines.children[oldIdx].textContent=nPlan.steps[oldIdx].say;while(lines.children.length>i)lines.removeChild(lines.lastChild);
+const p=document.createElement('div');p.className='nline';lines.appendChild(p);
+[...lines.children].forEach(x=>x.classList.remove('cur'));p.classList.add('cur');
+typeText(p,st.say);try{lines.scrollIntoView({block:'nearest'})}catch{}}
+narrHud();
+speak(st.say,()=>{if(g!==nGen)return;if(i+1<nPlan.steps.length){if(nAuto)later(()=>narrGo(i+1),460)}else narrHud()})}
+function narrSeek(i){if(!nPlan)return;if(i<0)i=0;if(i>=nPlan.steps.length)i=nPlan.steps.length-1;
+stopNarr();++nGen;vReset();vFocus('');
+if(nPlan.stateMode){for(let k=0;k<=i;k++){const s=nPlan.steps[k];if(s.v)s.v.forEach(vReveal)}
+renderPV(nPlan.steps[i].state||{});vFocus(nPlan.steps[i].focus||'')}
+else{if(nPlan.reset)nPlan.reset();FAST=true;for(let k=0;k<=i;k++){const s=nPlan.steps[k];if(s.run){try{s.run()}catch(e){}}}FAST=false}
+nIdx=i;
+const lines=document.getElementById('nlines');
+if(lines){lines.innerHTML='';for(let k=0;k<=i;k++){const p=document.createElement('div');p.className='nline';p.textContent=nPlan.steps[k].say;lines.appendChild(p)}const last=lines.lastChild;if(last)last.classList.add('cur')}
+narrHud();if(soundOn)sfx.click()}
+function narrPrev(){if(!nPlan){vertExplain();return}if(nIdx<=0){narrSeek(0);return}narrSeek(nIdx-1)}
+function narrNext(){if(!nPlan){vertExplain();return}
+if(nIdx<0){narrGo(0);return}
+if(nIdx+1>=nPlan.steps.length){narrSeek(0);return}
+narrGo(nIdx+1)}
+function narrToggle(){nAuto=!nAuto;if(nAuto&&nPlan&&nIdx<nPlan.steps.length-1)narrGo(nIdx+1);else narrHud()}
+function vertNext(){narrNext()}
+function startSteps(plan){nPlan={steps:plan.steps,reset:plan.reset,stateMode:false};nIdx=-1;nAuto=false;narrShell();narrGo(0)}
+function vertExplain(){nPlan=vMode==='mul'?vertMulPlan():vertDivPlan();nPlan.stateMode=true;nIdx=-1;nAuto=false;narrShell();narrGo(0)}
+function save(){try{localStorage.setItem('mathBoardV1',JSON.stringify(data))}catch{} }function esc(s){return String(s).replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]))}function log(q,val,right){data.attempts++;if(right)data.correct++;data.history.unshift({q,val,right});data.history=data.history.slice(0,30);save();updateSide()}function updateSide(){document.getElementById('attempts').textContent=data.attempts;document.getElementById('correct').textContent=data.correct;const pct=data.attempts?Math.round(100*data.correct/data.attempts):0;document.getElementById('progress').style.width=pct+'%';document.getElementById('rate').textContent=data.attempts?'目前正确率 '+pct+'%。更重要的是看错误有没有减少。':'先做几道练习，观察正确率。';document.getElementById('history').innerHTML=data.history.length?data.history.slice(0,8).map(h=>`<div class="logrow"><span class="${h.right?'check':'cross'}">${h.right?'✓':'○'}</span> ${esc(h.q)} → ${esc(h.val)}</div>`).join(''):'暂无记录'}function resetToday(){if(!confirm('确定清空本机的练习记录吗？'))return;data={attempts:0,correct:0,history:[]};save();updateSide()}
+function renderNav(){document.getElementById('stages').innerHTML=names.map((n,i)=>`<button class="stage ${stage===i?'active':''}" onclick="setStage(${i})" aria-current="${stage===i?'step':'false'}"><span class="n">阶段 ${i+1}</span><strong>${n}</strong><small>${summaries[i]}</small></button>`).join('');document.getElementById('prev').disabled=stage===0;document.getElementById('next').disabled=stage===4}function setStage(i){stage=i;sfx.whoosh();render();window.scrollTo({top:190,behavior:'smooth'})}function go(i){setStage(Math.max(0,Math.min(4,stage+i)))}function dots(n,extra=0,start=0){return Array.from({length:n},(_,i)=>`<i class="dot ${i>=n-extra?'extra':''}" style="--i:${Math.min(start+i,40)}"></i>`).join('')}function groups(n,p){const w=Math.min(p,4);return Array.from({length:n},(_,g)=>`<div class="group" style="--g:${g};grid-template-columns:repeat(${w},19px)">${dots(p,0,g*p)}</div>`).join('')}
+let lastStage=-1;function render(){stopNarr();renderNav();let el=document.getElementById('main');if(lastStage!==stage){el.classList.remove('fadein');void el.offsetWidth;el.classList.add('fadein');lastStage=stage}if(stage===0)el.innerHTML=`<span class="tag">阶段一 · 具体实物</span><h2>把乘法变成看得见的数量</h2><p class="desc">调整“几组”和“每组几个”，让孩子先说出数量，再对应到乘法。可以先让孩子自己猜总数，再点击显示。</p><div class="controls"><span>几组</span><div class="stepper"><button onclick="adjust('group',-1)">−</button><span>${groupN}</span><button onclick="adjust('group',1)">+</button></div><span>每组几个</span><div class="stepper"><button onclick="adjust('per',-1)">−</button><span>${perN}</span><button onclick="adjust('per',1)">+</button></div></div><div class="visual dz" id="vzone" aria-label="拖动圆点改变分组">${visualHTML()}</div><div class="tray" id="tray">${trayHTML()}</div><div class="bigmath" id="bigmath">${mathLine()}</div><div class="narr" id="narr"></div><div id="stage1ans" class="hintbox">家长先问：一共有多少个？能用加法和乘法分别表示吗？</div><div class="controls"><button class="btn" onclick="showQuantity()">显示计算过程</button><button class="btn green" onclick="explainQuantity()">▶ 讲解这道题</button><button class="btn alt" onclick="quantityRandom()">换一组数量</button><button class="btn alt" onclick="resetDots()">↺ 还原成一样多</button></div>`;else if(stage===1)renderMatch();else if(stage===2)renderDerive();else if(stage===3)renderDivision();else renderVertical();if(stage===0)bindDrag();updateSide()}
+let layout=null,pool=0;
+function countsNow(){return layout?layout.slice():Array.from({length:groupN},()=>perN)}
+function equalNow(){const c=countsNow();return c.length>0&&c.every(x=>x===c[0])}
+function visualHTML(){const cs=countsNow();let k=0;return cs.map((n,i)=>{const st=k;k+=n;return '<div class="group" data-gi="'+i+'" style="--g:'+Math.min(i,6)+';grid-template-columns:repeat('+Math.min(Math.max(n,1),5)+',19px)">'+dots(n,0,st)+'</div>'}).join('')}
+function mathLine(){const cs=countsNow(),tot=cs.reduce((a,b)=>a+b,0);return equalNow()?`${cs.length} 组 × ${cs[0]} 个 = ${tot}`:`${cs.join(' + ')} = ${tot}`}
+function trayHTML(){return '<span class="tray-l">🧺 '+(pool?'收起的点，可以拖回任意一组':'把点拖到这里 → 先拿出来')+'</span><div class="slot">'+dots(pool,0,0)+'</div>'}
+function renderVisual(){const cs=countsNow(),tot=cs.reduce((a,b)=>a+b,0),eq=equalNow();const z=document.getElementById('vzone');if(!z)return;z.innerHTML=visualHTML();const tr=document.getElementById('tray');if(tr)tr.innerHTML=trayHTML();
+const bm=document.getElementById('bigmath');if(bm)bm.textContent=mathLine();
+const hb=document.getElementById('stage1ans');if(hb)hb.innerHTML=eq?'家长先问：一共有多少个？能用加法和乘法分别表示吗？<br/><span class="small muted">也可以用手指拖动圆点，把一组里的点拖到另一组。</span>':`<strong>每组不一样多</strong>，这时乘法还用不了，只能加：${cs.join(' + ')} = ${tot}。再拖一拖，让每组一样多。`}
+function syncLayout(){const cs=countsNow();if(equalNow()){groupN=cs.length;perN=cs[0];const sp=document.querySelectorAll('.stepper span');if(sp[0])sp[0].textContent=groupN;if(sp[1])sp[1].textContent=perN}}
+let drag=null;
+function bindDrag(){const z=document.getElementById('vzone');if(z&&!z.dataset.bound){z.dataset.bound='1';z.addEventListener('pointerdown',dvStart)}const t=document.getElementById('tray');if(t&&!t.dataset.bound){t.dataset.bound='1';t.addEventListener('pointerdown',dvStart)}}
+function resetDots(){layout=null;pool=0;sfx.click();render()}
+function dvStart(e){const d=e.target.closest('.dot');if(!d)return;const g=d.closest('.group'),inTray=d.closest('#tray');if(!g&&!inTray)return;
+if(!layout)layout=countsNow();
+e.preventDefault();stopNarr();
+const r=d.getBoundingClientRect();const gh=document.createElement('div');gh.className='dot-ghost';gh.style.left=r.left+'px';gh.style.top=r.top+'px';gh.style.width=r.width+'px';gh.style.height=r.height+'px';document.body.appendChild(gh);
+drag={from:g?+g.dataset.gi:-1,gh,dx:e.clientX-r.left,dy:e.clientY-r.top,l:r.left,t:r.top};
+d.classList.add('dragging');
+document.addEventListener('pointermove',dvMove);document.addEventListener('pointerup',dvEnd);document.addEventListener('pointercancel',dvEnd)}
+function dvMove(e){if(!drag)return;drag.gh.style.transform='translate('+(e.clientX-drag.l-drag.dx)+'px,'+(e.clientY-drag.t-drag.dy)+'px)';
+const el=document.elementFromPoint(e.clientX,e.clientY);const t=el&&el.closest('.group,.tray');
+document.querySelectorAll('.over').forEach(x=>x.classList.remove('over'));if(t&&!(t.classList.contains('group')&&+t.dataset.gi===drag.from))t.classList.add('over')}
+function dvEnd(e){if(!drag)return;const dg=drag;drag=null;
+document.removeEventListener('pointermove',dvMove);document.removeEventListener('pointerup',dvEnd);document.removeEventListener('pointercancel',dvEnd);
+dg.gh.remove();document.querySelectorAll('.over').forEach(x=>x.classList.remove('over'));document.querySelectorAll('.dot.dragging').forEach(x=>x.classList.remove('dragging'));
+const el=document.elementFromPoint(e.clientX,e.clientY);const tg=el&&el.closest('.group'),tr=el&&el.closest('.tray');
+const f=dg.from;
+if(tg){const to=+tg.dataset.gi;
+ if(f>=0){if(to!==f&&layout[f]>0){layout[f]--;layout[to]++;sfx.pop()}}
+ else if(pool>0){pool--;layout[to]++;sfx.pop()}
+ syncLayout();renderVisual()}
+else if(tr){if(f>=0&&layout[f]>0){layout[f]--;pool++;sfx.whoosh()}syncLayout();renderVisual()}
+else renderVisual()}
+function adjust(type,d){layout=null;pool=0;if(type==='group')groupN=Math.max(2,Math.min(9,groupN+d));else perN=Math.max(2,Math.min(9,perN+d));sfx.click();render()}function quantityRandom(){layout=null;pool=0;groupN=2+Math.floor(Math.random()*5);perN=2+Math.floor(Math.random()*7);sfx.pop();render()}function countUp(el,to,ms=800){if(!el)return;let t0=null,n=0;const tick=t=>{if(t0===null)t0=t;const k=Math.max(0,Math.min(1,(t-t0)/ms));n++;el.textContent=k<1?Math.round(to*(1-Math.pow(1-k,3))):to;if(k<1&&n<150)requestAnimationFrame(tick)};requestAnimationFrame(tick);setTimeout(()=>{el.textContent=to},ms+300)}
+function showQuantity(){const cs=countsNow(),total=cs.reduce((a,b)=>a+b,0),eq=equalNow(),box=document.getElementById('stage1ans');if(!box)return;sfx.pop();cs.forEach((_,i)=>setTimeout(()=>tone(620+i*90,0,.12,'sine',.06),i*130));const add=cs.map((n,i)=>`<span class="term" style="animation-delay:${i*130}ms">${n}</span>`).join('<span class="plus">+</span>');const wait=cs.length*130+120;const mult=eq?`${cs.length} × ${cs[0]} = <strong class="count" id="c2">0</strong>`:`${cs.join(' + ')} = <strong class="count" id="c2">0</strong>`;box.innerHTML=`<div class="eqline">${add} = <strong class="count" id="c1">0</strong></div><div class="eqline" style="animation:fadeUp .4s ${wait}ms both">${mult}</div><div class="small muted" style="margin-top:6px">${eq?'再交换组数与每组数量，看看总数是否一样。':'每组数量不同，只能用加法；拖成一样多就能用乘法。'}</div>`;countUp(document.getElementById('c1'),total,Math.min(1400,wait+700));setTimeout(()=>countUp(document.getElementById('c2'),total,600),wait);tagGroups(cs);document.querySelectorAll('.visual .dot').forEach((d,i)=>setTimeout(()=>{d.classList.add('lit')},Math.min(i,40)*32+150))}
+function renderMatch(){const f=facts[quizIndex%facts.length];document.getElementById('main').innerHTML=`<span class="tag">阶段二 · 口诀匹配</span><h2>会背口诀，也要会找对算式</h2><p class="desc">让孩子看到算式后自己寻找对应口诀；从三个结果中选出正确答案。每次答案选定后才显示反馈，减少盲猜。</p><div class="bigmath">${f.a} × ${f.b} = ?</div><div class="hintbox">可以先说口诀“${cn[f.a]}${cn[f.b]}……”，如果不确定，再用上一阶段的实物分组验证。</div><div class="narr" id="narr"></div><div id="matchvisual"></div><div class="options">${choices(f.a*f.b).map(n=>`<button class="opt ${answered?(n===f.a*f.b?'correct':chosen===n?'wrong':''):''}" ${answered?'disabled':''} onclick="answerMatch(${n})">${n}</button>`).join('')}</div><div class="feedback" id="feedback">${answered?(chosen===f.a*f.b?'✅ 答对了！这个算式对应的结果是 '+f.a*f.b+'。':'🌱 这次还不准确。'+f.a+'组'+f.b+'个，一共 '+(f.a*f.b)+' 个。可以画点阵再试着说一遍。'):'不着急，想好再选。'}</div><div class="controls" style="margin-top:15px"><button class="btn" onclick="nextMatch()">换一道题 →</button><button class="btn green" onclick="explainMatch()">▶ 讲解这道题</button><button class="btn alt" onclick="showMatchVisual()">看数量图</button></div>`}const cn=['零','一','二','三','四','五','六','七','八','九'];function choices(v){let d=[v,Math.max(1,v-6),v+6];return d.sort((a,b)=>(a*37%17)-(b*37%17))}function burst(){let r=null;try{r=window.event&&window.event.target&&window.event.target.getBoundingClientRect?window.event.target.getBoundingClientRect():null}catch{}const cx=r?r.left+r.width/2:innerWidth/2,cy=r?r.top+r.height/2:innerHeight/2;const layer=document.createElement('div');layer.className='confetti-layer';for(let i=0;i<26;i++){const s=document.createElement('i');s.style.setProperty('--cx',cx+'px');s.style.setProperty('--cy',cy+'px');s.style.setProperty('--x',((Math.random()*2-1)*200).toFixed(0)+'px');s.style.setProperty('--y',(-(Math.random()*150+80)).toFixed(0)+'px');s.style.setProperty('--r',(Math.random()*720).toFixed(0)+'deg');s.style.setProperty('--d',(Math.random()*.18).toFixed(2)+'s');s.style.background=['#3478ec','#16a986','#ef9d44','#f25f7c','#8b6df0'][i%5];layer.appendChild(s)}document.body.appendChild(layer);setTimeout(()=>layer.remove(),1500)}
+function answerMatch(n){if(answered)return;const f=facts[quizIndex%facts.length];answered=true;chosen=n;log(f.a+'×'+f.b,n,n===f.a*f.b);const ok=n===f.a*f.b;if(ok){burst();sfx.good()}else sfx.bad();renderMatch();if(!ok)later(()=>explainMatch(),700)}function nextMatch(){sfx.click();quizIndex++;answered=false;chosen=null;renderMatch()}function showMatchVisual(){const f=facts[quizIndex%facts.length];document.getElementById('matchvisual').innerHTML=`<div class="visual" style="margin-top:15px">${groups(f.a,f.b)}</div>`}
+function renderDerive(){const f=derive[derivationStep%derive.length];document.getElementById('main').innerHTML=`<span class="tag">阶段三 · 计算策略</span><h2>忘记口诀，也能把答案推出来</h2><p class="desc">不是强迫孩子死记所有结果，而是从一个熟悉的算式出发，推导另一个算式。先让孩子讲出推导过程。</p><div class="bigmath">${f.a} × ${f.b} = ?</div><div class="hintbox"><strong>我已经知道：</strong>${f.known}<br/><strong>再想一想：</strong>${f.hint}</div><div class="narr" id="narr"></div><div class="options">${f.opts.map(n=>`<button class="opt ${answered?(n===f.a*f.b?'correct':chosen===n?'wrong':''):''}" ${answered?'disabled':''} onclick="answerDerive(${n})">${n}</button>`).join('')}</div><div class="feedback">${answered?'正确推导：'+f.work+(chosen===f.a*f.b?'。答对了！':'。这道题可以再用图形理解一次。'):'可以先口头推导，再选择答案。'}</div><div class="controls" style="margin-top:15px"><button class="btn" onclick="nextDerive()">下一种推导 →</button><button class="btn green" onclick="explainDerive()">▶ 讲解这道题</button></div>`}function answerDerive(n){if(answered)return;const f=derive[derivationStep%derive.length];answered=true;chosen=n;log(f.a+'×'+f.b,n,n===f.a*f.b);const ok=n===f.a*f.b;if(ok){burst();sfx.good()}else sfx.bad();renderDerive();if(!ok)later(()=>explainDerive(),700)}function nextDerive(){sfx.click();derivationStep++;answered=false;chosen=null;renderDerive()}
+function renderDivision(){const f=divs[divisionIndex%divs.length];const answer=f.total/f.groups;document.getElementById('main').innerHTML=`<span class="tag">阶段四 · 迁移应用</span><h2>用会的乘法，解决除法</h2><p class="desc">先看数量分组，再练习“乘几等于总数”。用乘法关系帮助孩子理解并检查除法答案。</p><div class="hintbox">有 <strong>${f.total}</strong> 颗星星，平均分成 <strong>${f.groups}</strong> 组。每组有几颗？</div><div class="visual ${divisionAnswered&&chosen===answer?'celebrate':''}">${groups(f.groups,answer)}</div><div class="bigmath">${f.total} ÷ ${f.groups} = ?</div><div class="narr" id="narr"></div><div class="options">${f.opts.map(n=>`<button class="opt ${divisionAnswered?(n===answer?'correct':chosen===n?'wrong':''):''}" ${divisionAnswered?'disabled':''} onclick="answerDivision(${n})">${n}</button>`).join('')}</div><div class="feedback">${divisionAnswered?(chosen===answer?'✅ 答对啦！':'🌱 再看看每组有几个圆点。')+' 因为 '+f.groups+' × '+answer+' = '+f.total+'，所以 '+f.total+' ÷ '+f.groups+' = '+answer+'。':'提示：想一想 '+f.groups+' 乘几等于 '+f.total+'。'}</div><div class="controls" style="margin-top:15px"><button class="btn" onclick="nextDivision()">下一道除法 →</button><button class="btn green" onclick="explainDivision()">▶ 讲解这道题</button></div>`}function answerDivision(n){if(divisionAnswered)return;const f=divs[divisionIndex%divs.length];divisionAnswered=true;chosen=n;log(f.total+'÷'+f.groups,n,n===f.total/f.groups);const ok=n===f.total/f.groups;if(ok){burst();sfx.good()}else sfx.bad();renderDivision();if(!ok)later(()=>explainDivision(),700)}function nextDivision(){sfx.click();divisionIndex++;divisionAnswered=false;chosen=null;renderDivision()}syncSound();render();try{speechSynthesis.getVoices();speechSynthesis.onvoiceschanged=()=>{}}catch{}
+</script></body></html>
